@@ -9,15 +9,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
 
     <script>
-        tailwind: config = {
+        tailwind.config = {
             theme:{
                 extend: {
                     colors: {
                         primary: '#000000', // Warna Hitam
                         secondary: '#ADFF2F', // Warna Lime Green
-                        tertiary: 'FFFFFF', // Warna Putih
+                        tertiary: '#FFFFFF', // Warna Putih
                         neutral: '#777777' // Warna Abu Abu
                     },
                     fontFamily: {
@@ -53,7 +55,7 @@
                 <div class="hidden md:flex space-x-8 font-mono font-bold uppercase text-sm lg:text-base items-center">
                     <a href="#About" class="text-primary hover:bg-secondary hover:px-2 transition-all py-1">About</a>
                     <a href="#Skills" class="text-primary hover:bg-secondary hover:px-2 transition-all py-1">Skills</a>
-                    <a href="#Project" class="text-primary hover:bg-secondary hover:px-2 transition-all py-1">Project</a>
+                    <a href="#Projects" class="text-primary hover:bg-secondary hover:px-2 transition-all py-1">Project</a>
                     <a href="#Certificate" class="text-primary hover:bg-secondary hover:px-2 transition-all py-1">Certificate</a>
                 </div>
 
@@ -88,7 +90,59 @@
 
     <!-- About Section -->
     <section id="about" class="pt-32 pb-20 px-4 md:px-10 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10 min-h-screen md:min-h-0 relative">
-        <div class="w-full md:w-2/3 relative z-10 reveal-target"></div>
+        <div class="w-full md:w-2/3 relative z-10 reveal-target">
+            <div class="inline-block bg-primary text-secondary font-mono font-bold px-3 py-1 mb-4 border-2 border-primary text-sm uppercase transition-transform hover:scale-105 hover:-rotate-2 cursor:pointer interactive-el">
+                Mahasiswa Teknik Informatika
+            </div>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-sans font-black uppercase tracking-tighter leading-none mb-6 text-primary">
+                Kevin<br>
+                <span class="bg-secondary px-2 border-4 border-primary shadow-brutal inline-block mt-2 interactive-el hover:-translate-y-2 hover:shadow-brutalSolid transition-all cursor-pointer">
+                    Firmansyah
+                </span>
+            </h1>
+
+            <div class="border-4 border-primary p-6 bg-tertiary shadow-brutalSolid mb-8 realitve">
+                <div class="absolute -top-3 -left-3 w-6 h-6 bg-secondary border-4 border-primary rounded-none"></div>
+                <div class="absolute -bottom-3 -right-3 w-6 h-6 bg-primary border-4 border-primary rounded-full"></div>
+
+                <h2 class="font-sans font-black text-2xl uppercase border-b-4 border-primary pb-2 mb-4"> About Me </h2>
+                <p class="font-mono text-primary text-base md:text-lg leading-relaxed font-bold">
+                    Halo! Saya Mahasiswa 
+                    <span class="bg-secondary px-1 border-2 border-primary ">Teknik Informatika</span> 
+                    yang memiliki ketertarikan kuat pada bidang 
+                    <span class="bg-primary text-tertiary px-1 border-2 border-primary">Web Development</span> 
+                    dan 
+                    <span class="underline decoration-4 decoration-secondary">UI/UX Design</span>
+                </p>
+
+                <p class="font-mono text-neutral text-sm md:text-base leading-relaxed mt-4 font-bold">
+                    Saya bersemangat dalam membangun aplikasi Web, mulai dari merancang antarmuka yang intuitif hingga menulis kode yang fungsional. Saat ini saya sedang mencari peluang magang
+                    untuk mengaplikasikan ilmu, berkolaborasi dengan profesional dan terus berkembang.
+                </p>
+            </div>
+            <div class="flex flex-warp gap-4 font-mono font-bold uppercase interactive-el">
+                <a href="#Projects" class="bg-primary text-tertiary border-4 border-primary px-8 py-4 shadow -[8px_8px_0px_0px_#ADFF2F] hover:shadow-[4px_4px_0px_0px_#ADFF2F] hover:translate-x-1 hover:translate-y-1 transition-all">
+                    Lihat Projek
+                </a>
+            </div>
+        </div>
+
+
+        <!-- Image Profile -->
+         <div class="w-full md:w-1/3 flex justify-center relative reveal-target" style="transition-delay: 200ms;">
+            <div class="w-64 h-64 md:w-80 border-8 border-primary bg-neutral relative z-10 flex items-center justify-center overflow-hidden shadow-brutalSolid transform rotate-3 interactive-el hover:rotate-6 hover:scale-185 transition-all duration-300 ">
+               <img src="image/FOTO KEVIN UPSCALER.png" alt="Foto Kevin" class="object-cover w-full h-full mix-blend-luminosity hover:mix-blend-normal transition-all">
+            </div>
+            <div class="absolute top-10 -right-4 w-20 h-20 bg-secondary border-4 border-primary animate-spin" style="animation-duration: 6s;"></div>
+         </div>
     </section>
+
+    <!-- Marque Ticker -->
+    <div class="marquee-container py-4 font-mono font-bold text-xl md:text-2xl uppercase relative z-20 text-primary">
+        <div class="marquee-content">
+            UI/UX DESIGN • WEB DEVELOPMENT • FIGMA • HTML/CSS • JAVASCRIPT • PHP • LARAVEL • MYSQL •
+            UI/UX DESIGN • WEB DEVELOPMENT • FIGMA • HTML/CSS • JAVASCRIPT • PHP • LARAVEL • MYSQL •
+        </div>
+    </div>
 </body>
 </html>
