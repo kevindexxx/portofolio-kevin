@@ -2,6 +2,7 @@ body {
     background-color: #FFFFFF;
     color: #000000;
     overflow-x: hidden;
+    /* overflow-y: scroll; */
 }
 
 .marquee-container{

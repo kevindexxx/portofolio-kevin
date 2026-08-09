@@ -144,5 +144,71 @@
             UI/UX DESIGN • WEB DEVELOPMENT • FIGMA • HTML/CSS • JAVASCRIPT • PHP • LARAVEL • MYSQL •
         </div>
     </div>
+
+    <!-- Skills -->
+     <section id="skills" class="py-24 px-4 md:px-10 bg-primary border-u-4 border-primary relative text-tertiary">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="reveal-target text-4xl md:text-6xl font-sans font-black uppercase mb-12 items-center gap-4">
+                <span class="bg-secondary text-primary px-4 py-2 border-4 border-primary shadow-[6px_6px_0px_0px_#FFFFFF]"> Tech Stack</span>
+                <span class="hidden md:inline"> & Tools</span>
+            </h2>
+
+            <!-- Card Front End -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="reveal-target bg-tertiary border-4 border-primary p-6 shadow-[8px_8px_0px_0px_#ADFF2F] text-primary hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_#ADFF2F] transition-all interactive-el" style="transition-delay: 100ms;">
+                    <h3 class="font-sans font-black text-2xl uppercase mb-6 border-b-4 border-primary pb-2"> Front End </h3>
+                    <div class="flex flex-wrap gap-3 font-mono font-bold text-sm">
+                        <span class="border-2 border-primary bg-secondary px-3 py-1">HTML</span>
+                        <span class="border-2 border-primary bg-secondary px-3 py-1">CSS</span>
+                        <span class="border-2 border-primary bg-secondary px-3 py-1">JavaScript</span>
+                        <span class="border-2 border-primary bg-tertiary px-3 py-1">TailWind CSS</span>
+                        <span class="border-2 border-primary bg-tertiary px-3 py-1">Boostrap</span>
+                        <span class="border-2 border-primary bg-tertiary px-3 py-1">Vue JS</span>
+                    </div>
+                </div>
+            
+            <!-- Card Backend -->
+                <div class="reveal-target bg-tertiary border-4 border-primary p-6 shadow-[8px_8px_0px_0px_#ADFF2F] text-primary hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_#ADFF2F] transition-all interactive-el" style="transition-delay: 100ms;">
+                    <h3 class="font-sans font-black text-2xl uppercase mb-6 border-b-4 border-primary pb-2">Back End</h3>
+                    <div class="flex flex-wrap gap-3 font-mono font-bold text-sm">
+                        <span class="border-2 border-primary bg-primary text-tertiary px-3 py-1">PHP Native</span>
+                        <span class="border-2 border-primary bg-primary text-tertiary px-3 py-1">Laravel Dasar</span>
+                        <span class="border-2 border-primary bg-tertiary px-3 py-1">MySQL</span>
+                    </div>
+                </div>
+
+            <!-- Card Tools -->
+                <div class="reveal-target bg-tertiary border-4 border-primary p-6 shadow-[8px_8px_0px_0px_#ADFF2F] text-primary hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_#ADFF2F] transition-all interactive-el" style="transition-delay: 100ms;">
+                    <h3 class="font-sans font-black text-2xl uppercase mb-6 border-6 border-primary pb-2">Tools</h3>
+                    <div class="flex flex-wrap gap-3 font-mono font-bold text-sm">
+                        <span class="border-2 border-primary bg-neutral text-tertiary px-3 py-1">VS Code</span>
+                        <span class="border-2 border-primary bg-neutral text-tertiary px-3 py-1">Figma</span>
+                        <span class="border-2 border-primary bg-neutral px-3 py-1">Git</span>
+                        <span class="border-2 border-primary bg-neutral px-3 py-1">GitHub</span>
+                        <span class="border-2 border-primary bg-neutral px-3 py-1">Laragon</span>
+                        <span class="border-2 border-primary bg-neutral px-3 py-1">DBeaver</span>
+                        <span class="border-2 border-primary bg-neutral px-3 py-1">Herd</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+    <!-- Project -->
+    <section id="projects" class="py-24 md:px-10 bg-[url]">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 reveal-targer">
+                <h2 class="text-5xl md:text-7xl font-sans font-black uppercase text-primary">
+                    <span class="bg-tertiary px-2 border-4 border-primary">Sample</span><br>
+                    <span class="bg-secondary px-2 border-4 border-primary shadow-brutal inline-block mt-2">Projects</span>
+                </h2>
+                <div class="font-mono font-bold bg-primary text-secondary px-4 py-2 border-2 border-primary">
+                    > Total Rendered: <span id="project-count">0</span>
+                </div>
+            </div>
+
+            <div id="dynamic-projects-container" class="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
+        </div>
+    </section>
 </body>
 </html>
