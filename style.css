@@ -23,3 +23,59 @@ body {
     0% {transform: translate(0,0);}
     100%{transform: translate(-100%, 0);}
 }
+
+::-webkit-scrollbar{width: 16px;}
+::-webkit-scrollbar-track{background: #FFFFFF; border-left: 4px solid #000000;}
+::-webkit-scrollbar-thumb{background: #ADFF2F; border-left: 4px solid #000000; border-bottom: 4px solid #000000;}
+::-webkit-scrollbar-thumb:hover{background: #000000;}
+
+.reveal-target{
+    opacity: 0;
+    transform: translateY(50px) scale(0.95) rotate(-2deg);
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.25, 1);
+}
+
+.reveal-target.is-visible{
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0);
+}
+
+#brutal-cursor{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #ADFF2F;
+    border: 3px solid #000000;
+    pointer-events: none;
+    z-index: 999;
+    transform: translate(-50%, 50%);
+    transition: width 0.15s, height 0.15s, background-color 0.15s;
+    mix-blend-mode: difference;
+}
+
+#brutal-cursor.cursor-hover{
+    width: 50px;
+    height: 50px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+}
+
+@keyframes brutal-shake{
+    0% { transform: translate(0) skewX(-6deg); }
+    20% { transform: translate(-3px, 3px) skewX(-6deg); }
+    40% { transform: translate(3px, -3px) skewX(-6deg); }
+    60% { transform: translate(-3px, -3px) skewX(-6deg); }
+    80% { transform: translate(3px, 3px) skewX(-6deg); }
+    100% { transform: translate(0) skewX(-6deg); }
+}
+
+.hover-shake:hover{
+    animation: brutal-shake 0.3s ease-in-out infinite;
+}
+
+@media (pointer: coarse){
+    body{cursor: auto;}
+    #brutal-cursor {display:none}
+}
