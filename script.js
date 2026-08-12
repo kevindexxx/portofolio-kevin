@@ -33,7 +33,7 @@ const projectsData = [
             }
         ];
 
-const container = document.getElementById('dynamic-project-container');
+const container = document.getElementById('dynamic-projects-container');
 document.getElementById('project-count').innerText = projectsData.length;
 
 projectsData.forEach((project, index)=>{
@@ -60,4 +60,73 @@ projectsData.forEach((project, index)=>{
                 </article>
             `;
             container.innerHTML += cardHtml;
-})
+});
+
+const btn = document.getElementById('mobile-menu-button');
+const menu = document.getElementById('mobile-menu');
+
+btn.addEventListener('click', () => {
+    const isHidden = menu.classList.toggle('hidden')
+
+    if(!isHidden){
+        btn.innerText = 'Tutup';
+        btn.classList.replace('bg-primary', 'bg-secondary');
+        btn.classList.replace('text-secondary', 'text-primary')
+    }else{
+        btn.innerText = 'Menu';
+        btn.classList.replace('bg-secondary', 'bg-primary');
+        btn.classList.replace('text-primary', 'text-secondary')
+    }
+});
+
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+        btn.innerText = 'Menu';
+        btn.classList.replace('bg-primary', 'bg-secondary');
+        btn.classList.replace('text-secondary', 'text-primary ')
+    });
+});
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('is-visible');
+        }
+    });
+
+},{threshold: 0.1, rootMargin: "0px 0px -50px 0px"});
+
+document.querySelectorAll('.reveal-target').forEach(el => observer.observe(el));
+
+const customCursor = document.getElementById('brutal-cursor');
+    if(window.matchMedia("(pointer: fine)").matches){
+        document.addEventListener('mousemove',(e) => {
+            customCursor.style.left = e.clientX + 'px';
+            customCursor.style.top = e.clientY + 'px'
+        });
+
+        document.querySelectorAll('.interactive-el, a, button').forEach(el => {
+            el.addEventListener('mouseenter', () => customCursor.classList.add('cursor-hover'))
+            el.addEventListener('mouseleave', () => customCursor.classList.remove('cursor-hover'))
+        });
+    }
+
+const modal = document.getElementById('custom-modal');
+const modalBox = document.getElementById('modal-content-box');
+
+window.openModal = function(title, message){
+    document.getElementById('modal-title').innerText = title;
+    document.getElementById('modal-message').innerText = message;
+
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    modalBox.classList.remove('scale-90');
+    modalBox.classList.add('scale-100');
+}
+
+window.closeModal = function(){
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    modalBox.classList.remove('scale-100');
+    modalBox.classList.add('scale-90')
+}
+            
