@@ -23,7 +23,7 @@
                     },
                     fontFamily: {
                         sans: ['Montserrat', 'sans-serif'],
-                        mono: ['"JetBrains Mono"', 'monospace']
+                        mono: ['JetBrains Mono', 'monospace']
                     },
                     boxShadow: {
                         brutal: '8px 8px 0px 0px #000000',
@@ -35,7 +35,7 @@
         }
     </script>
 </head>
-<body class="font-mono antialiased selection:bg-primary selection: text-secondary cursor-default">
+<body class="font-mono antialiased selection:bg-primary selection:text-secondary">
     <div id="brutal-cursor" class="hidden md:block"></div>
 
     <!-- Navbar -->
@@ -52,10 +52,10 @@
 
                 <!-- Menu -->
                 <div class="hidden md:flex space-x-8 font-mono font-bold uppercase text-sm lg:text-base items-center">
-                    <a href="#About" class="text-primary hover:bg-secondary hover:px-2 transition-all py-1">About</a>
-                    <a href="#Skills" class="text-primary hover:bg-secondary hover:px-2 transition-all py-1">Skills</a>
-                    <a href="#Projects" class="text-primary hover:bg-secondary hover:px-2 transition-all py-1">Project</a>
-                    <a href="#Certificate" class="text-primary hover:bg-secondary hover:px-2 transition-all py-1">Certificate</a>
+                    <a href="#about" class="text-primary hover:bg-secondary hover:px-2 transition-all py-1">About</a>
+                    <a href="#skills" class="text-primary hover:bg-secondary hover:px-2 transition-all py-1">Skills</a>
+                    <a href="#projects" class="text-primary hover:bg-secondary hover:px-2 transition-all py-1">Project</a>
+                    <a href="#certificates" class="text-primary hover:bg-secondary hover:px-2 transition-all py-1">Certificate</a>
                 </div>
 
                  <!-- Button CTA -->
@@ -77,11 +77,11 @@
         <!-- Menu Mobile -->
         <div id="mobile-menu" class="hidden md:hidden bg-tertiary border-b-4 border-primary shadow-brutal relative z-40">
             <div class="px-4 pt-2 pb-6 space-y-2 font-mono font-bold uppercase text-center">
-                <a href="#About" class="block text-primary hover:bg-secondary py-3 border-b-2 border-primary"> About </a>
-                <a href="#Skills" class="block text-primary hover:bg-secondary py-3 border-b-2 border-primary"> Skills </a>
-                <a href="#Project" class="block text-primary hover:bg-secondary py-3 border-b-2 border-primary"> Project </a>
-                <a href="#Certificate" class="block text-primary hover:bg-secondary py-3 border-b-2 border-primary"> Certificate </a>
-                <a href="#Contact" class="bloxk text-primary hover:bg-secondary py-3 bg-secondary border-4 border-primary mt-4"> Lets Work </a>
+                <a href="#about" class="block text-primary hover:bg-secondary py-3 border-b-2 border-primary"> About </a>
+                <a href="#skills" class="block text-primary hover:bg-secondary py-3 border-b-2 border-primary"> Skills </a>
+                <a href="#project" class="block text-primary hover:bg-secondary py-3 border-b-2 border-primary"> Project </a>
+                <a href="#certificates" class="block text-primary hover:bg-secondary py-3 border-b-2 border-primary"> Certificate </a>
+                <a href="#contact" class="block text-primary hover:bg-secondary py-3 bg-secondary border-4 border-primary mt-4"> Lets Work </a>
             </div>
         </div>
     </nav>
@@ -90,7 +90,7 @@
     <!-- About Section -->
     <section id="about" class="pt-32 pb-20 px-4 md:px-10 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10 min-h-screen md:min-h-0 relative">
         <div class="w-full md:w-2/3 relative z-10 reveal-target">
-            <div class="inline-block bg-primary text-secondary font-mono font-bold px-3 py-1 mb-4 border-2 border-primary text-sm uppercase transition-transform hover:scale-105 hover:-rotate-2 cursor:pointer interactive-el">
+            <div class="inline-block bg-primary text-secondary font-mono font-bold px-3 py-1 mb-4 border-2 border-primary text-sm uppercase transition-transform hover:scale-105 hover:-rotate-2 cursor-pointer interactive-el">
                 Mahasiswa Teknik Informatika
             </div>
             <h1 class="text-5xl md:text-7xl lg:text-8xl font-sans font-black uppercase tracking-tighter leading-none mb-6 text-primary">
@@ -100,7 +100,7 @@
                 </span>
             </h1>
 
-            <div class="border-4 border-primary p-6 bg-tertiary shadow-brutalSolid mb-8 realitve">
+            <div class="border-4 border-primary p-6 bg-tertiary shadow-brutalSolid mb-8 relative">
                 <div class="absolute -top-3 -left-3 w-6 h-6 bg-secondary border-4 border-primary rounded-none"></div>
                 <div class="absolute -bottom-3 -right-3 w-6 h-6 bg-primary border-4 border-primary rounded-full"></div>
 
@@ -119,8 +119,8 @@
                     untuk mengaplikasikan ilmu, berkolaborasi dengan profesional dan terus berkembang.
                 </p>
             </div>
-            <div class="flex flex-warp gap-4 font-mono font-bold uppercase interactive-el">
-                <a href="#Projects" class="bg-primary text-tertiary border-4 border-primary px-8 py-4 shadow -[8px_8px_0px_0px_#ADFF2F] hover:shadow-[4px_4px_0px_0px_#ADFF2F] hover:translate-x-1 hover:translate-y-1 transition-all">
+            <div class="flex flex-wrap gap-4 font-mono font-bold uppercase interactive-el">
+                <a href="#Projects" class="bg-primary text-tertiary border-4 border-primary px-8 py-4 shadow-[8px_8px_0px_0px_#ADFF2F] hover:shadow-[4px_4px_0px_0px_#ADFF2F] hover:translate-x-1 hover:translate-y-1 transition-all">
                     Lihat Projek
                 </a>
             </div>
@@ -145,7 +145,7 @@
     </div>
 
     <!-- Skills -->
-     <section id="skills" class="py-24 px-4 md:px-10 bg-primary border-u-4 border-primary relative text-tertiary">
+     <section id="skills" class="py-24 px-4 md:px-10 bg-primary border-b-4 border-primary relative text-tertiary">
         <div class="max-w-7xl mx-auto">
             <h2 class="reveal-target text-4xl md:text-6xl font-sans font-black uppercase mb-12 items-center gap-4">
                 <span class="bg-secondary text-primary px-4 py-2 border-4 border-primary shadow-[6px_6px_0px_0px_#FFFFFF]"> Tech Stack</span>
@@ -194,9 +194,9 @@
      </section>
 
     <!-- Project -->
-    <section id="projects" class="py-24 md:px-10 bg-[url]">
+    <section id="projects" class="py-24 md:px-10 bg-[('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiM3Nzc3NzciIGZpbGwtb3BhY2l0eT0iMC4yIi8+PC9zdmc+')]">
         <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 reveal-targer">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 reveal-target">
                 <h2 class="text-5xl md:text-7xl font-sans font-black uppercase text-primary">
                     <span class="bg-tertiary px-2 border-4 border-primary">Sample</span><br>
                     <span class="bg-secondary px-2 border-4 border-primary shadow-brutal inline-block mt-2">Projects</span>
@@ -219,7 +219,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Sertifikat 1 -->
-                <div class="reveal-target bg-tertiary border-4 border-primary p-4 shadow-brutal hover:shadow-burtalHover hover:-translate-y-1 transition-all interactive-el">
+                <div class="reveal-target bg-tertiary border-4 border-primary p-4 shadow-brutal hover:shadow-brutalHover hover:-translate-y-1 transition-all interactive-el">
                     <div class="aspect-video bg-neutral/20 border-4 border-primary mb-4 flex items-center justify-center overflow-hidden relative group cursor-pointer" onclick="openModal('Sertifikat Web Development', 'Didapatkan dari pelatihan online X')">
                         <img src="image/CERTIFICATE DATA ANALYST - BATCH 1-10.webp" alt="Sertifikat 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
                         <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
@@ -291,7 +291,7 @@
                             <span class="font-sans font-black text-secondary text-xl border-2 border-secondary px-4 py-2">VIEW</span>
                         </div>
                     </div>
-                    <h3 class="font-sans font-black text-xl text-black uppercase mb-2">Peserta Lomba UI/UX </h3>
+                    <h3 class="font-sans font-black text-xl text-black uppercase mb-2">Peserta Lomba UI/UX Tingkat Nasional</h3>
                     <p class="font-mono text-xs font-bold text-neutral">Penyelenggara: Infornation Unram(Juni 2026)</p>
                 </div>
                 <div class="reveal-target bg-tertiary border-4 border-primary p-4 shadow-brutal hover:shadow-burtalHover hover:-translate-y-1 transition-all interactive-el">
@@ -301,7 +301,7 @@
                             <span class="font-sans font-black text-secondary text-xl border-2 border-secondary px-4 py-2">VIEW</span>
                         </div>
                     </div>
-                    <h3 class="font-sans font-black text-xl text-black uppercase mb-2">Finlais 5 Besar Lomba UI/UX </h3>
+                    <h3 class="font-sans font-black text-xl text-black uppercase mb-2">Finalis 5 Besar Lomba UI/UX Tingkat Nasional</h3>
                     <p class="font-mono text-xs font-bold text-neutral">Penyelenggara: Infornation Unram(Juni 2026)</p>
                 </div>
             </div>
@@ -332,7 +332,7 @@
                         <span class="mt-4 text-sm break-all lowercase font-normal">kevinfirmansyah653@gmail.com</span>
                     </a>
                     <!-- Contact -->
-                    <a href="https://github.com/kevindexx" target="_blank" class="flex flex-col border-4 border-primary p-6 bg-primary text-tertiary hover:bg-secondary hover:text-primary hover:shadow-brutalHover hover:-translate-y-1 transition-all group">
+                    <a href="" target="_blank" class="flex flex-col border-4 border-primary p-6 bg-primary text-tertiary hover:bg-secondary hover:text-primary hover:shadow-brutalHover hover:-translate-y-1 transition-all group">
                         <span class="text-neutral text-sm mb-2"> Phone </span>
                         <span class="text-xl">WhatsApp</span>
                         <span class="mt-4 text-sm break-all lowercase font-normal">0896-7585-3951</span>

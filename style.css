@@ -2,7 +2,7 @@ body {
     background-color: #FFFFFF;
     color: #000000;
     overflow-x: hidden;
-    cursor:none;
+    cursor: none;
 }
 
 .marquee-container{
@@ -50,7 +50,7 @@ body {
     border: 3px solid #000000;
     pointer-events: none;
     z-index: 999;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, -50%);
     transition: width 0.15s, height 0.15s, background-color 0.15s;
     mix-blend-mode: difference;
 }
