@@ -115,9 +115,17 @@ const customCursor = document.getElementById('brutal-cursor');
 const modal = document.getElementById('custom-modal');
 const modalBox = document.getElementById('modal-content-box');
 
-window.openModal = function(title, message){
+window.openModal = function(title, message, imageSrc){
     document.getElementById('modal-title').innerText = title;
     document.getElementById('modal-message').innerText = message;
+
+    const modalImage = document.getElementById('modal-image');
+    if(imageSrc){
+        modalImage.src = imageSrc;
+        modalImage.classList.remove('hidden');
+    }else {
+        modalImage.classList.add('hidden')
+    }
 
     modal.classList.remove('opacity-0', 'pointer-events-none');
     modalBox.classList.remove('scale-90');
